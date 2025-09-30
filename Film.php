@@ -15,18 +15,20 @@ class Film
 
    public function getNumeroFilm():int
    {
-      return this -> $numeroFilm;
+      return $this -> numeroFilm;
    }
     public function getTitreFilm(): string
    {
-      return this -> $titreFilm;
+      return $this -> titreFilm;
    }
     public function getNbEntreeFilm(): int
    {
-      return this -> $nbEntreeFilm;
+      return $this -> nbEntreeFilm;
    }
    public function setNbEntreeFilm(int $nbEntreeFilm) : void
    {
       $this-> nbEntreFilm = $nbEntreeFilm;
    }
+   
+   
 }
