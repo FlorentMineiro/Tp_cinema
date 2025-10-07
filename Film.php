@@ -1,15 +1,12 @@
 <?php
 
-include "Realisateur.php";
-include "Acteur.php";
-
-class Film extends Realisateur
+class Film 
 {
    private int $numeroFilm ;
    private string  $titreFilm ;
    private int $nbEntreeFilm ;
-   public Realisateur $sonRealisateur;
-   public array $lesActeurs = [] ;
+   private Realisateur $sonRealisateur;
+   private array $lesActeurs = [];
 
 
    public function __construct(int $numeroFilm ,string $titreFilm, int $nbEntreeFilm, Realisateur $sonRealisateur)
@@ -18,7 +15,7 @@ class Film extends Realisateur
     $this-> titreFilm = $titreFilm ;
     $this-> nbEntreeFilm = $nbEntreeFilm ;
     $this-> sonRealisateur = $sonRealisateur ;
-    $this-> lesActeurs = $lesActeurs ;
+    
    }
 
   /* public function __construct(int $numeroFilm ,string $titreFilm, int $nbEntreeFilm)
@@ -43,16 +40,16 @@ class Film extends Realisateur
    }
    public function setNbEntreeFilm(int $nbEntreeFilm) : void
    {
-      $this-> nbEntreFilm = $nbEntreeFilm;
+      $this->nbEntreFilm = $nbEntreeFilm;
    }
    public function getSonRealisateur(): Realisateur 
    {
-      return $this -> $sonRealisateur;
+      return $this -> sonRealisateur;
    }
 
    public function getLesActeurs() : array
    {
-      return $this -> $lesActeurs;
+      return $this->lesActeurs;
    }
    
    

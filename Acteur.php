@@ -4,9 +4,9 @@ class Acteur
 {
     private string $nomActeur;
     private string $prenomActeur;
-    private boolean $estCesarise;
+    private bool $estCesarise;
 
-    public function __construct(string $nomActeur,string $prenomActeur,boolean $estCesarise)  
+    public function __construct(string $nomActeur,string $prenomActeur,bool $estCesarise)  
     {
         $this -> nomActeur = $nomActeur;
         $this -> prenomActeur = $prenomActeur;
@@ -14,17 +14,17 @@ class Acteur
     }
     public function getNomActeur() : string 
     {
-        return $this -> $nomActeur;
+        return $this -> nomActeur;
     }
     public function getPrenomActeur() : string 
     {
-        return $this -> $prenomActeur;
+        return $this -> prenomActeur;
     }
-    public function getEstCesarise() : boolean
+    public function getEstCesarise() : bool
     {
-        return $this -> $estCesarise;
+        return $this -> estCesarise;
     }
-    public function setEstCesarise(boolean $unCesar) : void 
+    public function setEstCesarise(bool $unCesar) : void 
     {
         $this -> unCesar = $unCesar;
     }
