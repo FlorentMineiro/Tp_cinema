@@ -6,26 +6,19 @@ class Film
    private string  $titreFilm ;
    private int $nbEntreeFilm ;
    private Realisateur $sonRealisateur;
-   private array $lesActeurs = [];
+   private array $lesActeurs ;
 
 
-   public function __construct(int $numeroFilm ,string $titreFilm, int $nbEntreeFilm, Realisateur $sonRealisateur)
+   public function __construct(int $numeroFilm ,string $titreFilm, int $nbEntreeFilm, Realisateur $sonRealisateur = null)
    {
     $this-> numeroFilm = $numeroFilm ;
     $this-> titreFilm = $titreFilm ;
     $this-> nbEntreeFilm = $nbEntreeFilm ;
     $this-> sonRealisateur = $sonRealisateur ;
+    $this-> lesActeurs = [];
     
    }
-
-  /* public function __construct(int $numeroFilm ,string $titreFilm, int $nbEntreeFilm)
-   {
-    $this-> numeroFilm = $numeroFilm ;
-    $this-> titreFilm = $titreFilm ;
-    $this-> nbEntreeFilm = $nbEntreeFilm ;
-   }*/
    
-
    public function getNumeroFilm():int
    {
       return $this -> numeroFilm;
@@ -50,6 +43,11 @@ class Film
    public function getLesActeurs() : array
    {
       return $this->lesActeurs;
+   }
+
+   public function ajouterActeur(Acteur $unActeur) : void
+   {
+      $this-> lesActeurs[] = $unActeur;
    }
    
    

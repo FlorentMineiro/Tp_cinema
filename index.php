@@ -25,25 +25,41 @@ $septiemeActeur = new Acteur("Pattinson","Robert",true);
 $huitiemeActeur = new Acteur("Kravitz","Zöe",false);
 $neuviemeActeur = new Acteur("Dano","Paul",false);
 
-$tabActeur = [0 => $premierActeur,
-            1 => $deuxiemeActeur  ,         
-            2 => $troisiemeActeur,
-            3 => $quatriemeActeur,
-            4 => $cinquiemeActeur,
-            5 => $sixiemeActeur,
-            6 => $septiemeActeur,
-            7 => $huitiemeActeur,
-            8 => $neuviemeActeur];
+$premierFilm->ajouterActeur($premierActeur);
+$premierFilm->ajouterActeur($deuxiemeActeur);
+$premierFilm->ajouterActeur($troisiemeActeur);
+
+$deuxiemeFilm->ajouterActeur($quatriemeActeur);
+$deuxiemeFilm->ajouterActeur($cinquiemeActeur);
+$deuxiemeFilm->ajouterActeur($sixiemeActeur);
+
+$troisiemeFilm->ajouterActeur($septiemeActeur);
+$troisiemeFilm->ajouterActeur($huitiemeActeur);
+$troisiemeFilm->ajouterActeur($neuviemeActeur);
 
 
 
 echo "Info sur le film ==> \n".$premierFilm->getNumeroFilm()." - ".$premierFilm->getTitreFilm()." - ".$premierFilm->getNbEntreeFilm()." - ".$premierRealisateur->getNomRealisateur()." - ".$premierRealisateur->getPrenomRealisateur()."\n";
 
 echo "Liste des Acteurs ==> \n";
-/*for ($indice = 0 ; $indice < 3; $indice++)
-    {
-        echo $tabActeur[$indice]." \n ";
-    }*/
-echo "Info sur le film ==> \n".$deuxiemeFilm->getNumeroFilm()." - ".$deuxiemeFilm ->getTitreFilm()." - ".$deuxiemeFilm->getNbEntreeFilm().$deuxiemeRealisateur->getNomRealisateur()." - ".$deuxiemeRealisateur->getPrenomRealisateur()."\n";
-echo "Info sur le film ==> \n".$troisiemeFilm->getNumeroFilm()." - ".$troisiemeFilm->getTitreFilm()." - ".$troisiemeFilm->getNbEntreeFilm().$troisiemeRealisateur->getNomRealisateur()." - ".$troisiemeRealisateur->getPrenomRealisateur();
 
+foreach($premierFilm-> getLesActeurs() as $acteurs)
+{
+        echo $acteurs->getNomActeur()." - ".$acteurs->getPrenomActeur()." - ".$acteurs->getEstCesarise()."\n";
+}
+
+echo "Info sur le film ==> \n".$deuxiemeFilm->getNumeroFilm()." - ".$deuxiemeFilm ->getTitreFilm()." - ".$deuxiemeFilm->getNbEntreeFilm().$deuxiemeRealisateur->getNomRealisateur()." - ".$deuxiemeRealisateur->getPrenomRealisateur()."\n";
+echo "Liste des Acteurs ==> \n";
+foreach($deuxiemeFilm-> getLesActeurs() as $acteursDeuxiemeFilm)
+{
+        echo $acteursDeuxiemeFilm->getNomActeur()." - ".$acteursDeuxiemeFilm->getPrenomActeur()." - ".$acteursDeuxiemeFilm->getEstCesarise()."\n";
+}
+
+
+echo "Info sur le film ==> \n".$troisiemeFilm->getNumeroFilm()." - ".$troisiemeFilm->getTitreFilm()." - ".$troisiemeFilm->getNbEntreeFilm().$troisiemeRealisateur->getNomRealisateur()." - ".$troisiemeRealisateur->getPrenomRealisateur();
+echo "Liste des Acteurs ==> \n";
+
+foreach($troisiemeFilm-> getLesActeurs() as $acteursTroisiemeFilm)
+{
+        echo $acteursTroisiemeFilm->getNomActeur()." - ".$acteursTroisiemeFilm->getPrenomActeur()." - ".$acteursTroisiemeFilm->getEstCesarise()."\n";
+}
