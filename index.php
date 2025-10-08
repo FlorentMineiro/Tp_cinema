@@ -64,7 +64,7 @@ foreach($deuxiemeFilm-> getLesActeurs() as $acteursDeuxiemeFilm)
 }       
 
 
-echo "Info sur le film ==> \n".$troisiemeFilm->getNumeroFilm()." - ".$troisiemeFilm->getTitreFilm()." - ".$troisiemeFilm->getNbEntreeFilm().$troisiemeRealisateur->getNomRealisateur()." - ".$troisiemeRealisateur->getPrenomRealisateur()."\n";
+echo "Info sur le film ==> \n".$troisiemeFilm->getNumeroFilm()." - ".$troisiemeFilm->getTitreFilm()." - ".$troisiemeFilm->getNbEntreeFilm()." - ".$troisiemeRealisateur->getNomRealisateur()." - ".$troisiemeRealisateur->getPrenomRealisateur()."\n";
 echo "Liste des Acteurs ==> \n";
 
 foreach($troisiemeFilm-> getLesActeurs() as $acteursTroisiemeFilm)
